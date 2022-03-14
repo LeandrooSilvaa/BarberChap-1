@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&family=Nunito:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&family=Noto+Serif&family=Nunito:wght@200&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&family=Rowdies:wght@300;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    --font-titulo:'Jua', sans-serif;
+    --font-geral: 'Noto Serif', serif;
+    --font-acao:'Barlow Condensed', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+.hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 160;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.show-menu .hamburguer{
+    right: 16rem;
+}
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: white;
+    box-shadow: black;
+}
+header{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.img-home{
+    width: 100%;
+    height: 100% ;
+    overflow: hidden;
+    background-color: black;
+    
+   
+}
+
+.banner{
+    
+    
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+.banner h1{
+    color: white;
+    font-family: var(--font-titulo);
+    font-size: 3rem;
+    font-weight: 400;
+    text-shadow: 4px 5px 2px rgba(0, 0, 0, 0.562);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBanner 2s 0.5s forwards;
+}
+.banner p {
+    color: white;
+    font-family: var(--font-acao);
+    font-size: 1.3rem;
+    font-weight: 100;
+    text-shadow: 4px 3px 2px black;
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBanner 2s 0.5s forwards;
+
+}
+ .botao{
+     width: 150px;
+     height: 50px;
+     border-radius: 5px;
+     background-image: linear-gradient(to right, #271d08, rgb(170, 150, 142));
+     cursor: pointer;
+     font-family: var(--font-acao);
+     font-size: 1.2rem;
+     font-weight: bolder;
+     box-shadow: 4px 3px 2px rgba(0, 0, 0, 0.623);
+    
+     transition: 1s;
+     color: white;
+     opacity: 0;
+     animation: moveBanner 2s 0.5s forwards;
+ }
+  .botao:hover{
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+      color: rgb(57, 176, 180);
+      
+      transition: 1s;
+  }
+@keyframes moveBanner{
+0%{
+    transform:translateY(10rem) rotateY(-200deg) ;
+}
+100%{
+    transform: translatey(0) rotatey(0);
+    opacity: 1;
+}
+
+}
+.img-home img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    animation: zoom 15s;
+    position: relative;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+.menu-lateral{
+    width: 20rem;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    position: fixed;
+    top: 0;
+    right: 0rem;
+    transition: all 1s;
+    z-index: 150;
+    opacity: ;
+
+}
+.show-menu .menu-lateral{
+    right: 0;
+}
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.menu-item{
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.menu-link{
+    font-family: var(--font-titulo);
+    font-size: 2rem;
+    color: #555;
+    transition: color 1s;
+}
+.menu-link:hover{
+    color: #03c8eb;
+}
+#conhecimentos{
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(6, 6rem);
+    row-gap: .5rem;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    
+}
+.sessao-conhecimento{
+    background-color: yellow;
+    
+    
+}
+#conhecimento-html{
+    
+    grid-column: 7/3;
+    
+}
+#conhecimento-css{
+    grid-column: 7/3;
+    
+    overflow: hidden;
+}
+#conhecimento-js{
+    grid-column: 7/3;
+    
+}
+#conhecimento-sql{
+    grid-column: 7/3;
+}
