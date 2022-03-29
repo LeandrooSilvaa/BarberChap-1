@@ -91,7 +91,7 @@ header{
      width: 150px;
      height: 50px;
      border-radius: 5px;
-     background-image: linear-gradient(to right, #271d08, rgb(170, 150, 142));
+     background-image: linear-gradient(to right, #023047, #219ebc);
      cursor: pointer;
      font-family: var(--font-acao);
      font-size: 1.2rem;
@@ -104,10 +104,8 @@ header{
      animation: moveBanner 2s 0.5s forwards;
  }
   .botao:hover{
-    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
-      color: rgb(57, 176, 180);
-      
-      transition: 1s;
+    background-image: linear-gradient(to right, #219ebc, #023047);
+    transition: 1s;
   }
 @keyframes moveBanner{
 0%{
@@ -124,7 +122,7 @@ header{
     height: 100%;
     object-fit: cover;
     opacity: 0.5;
-    animation: zoom 15s;
+    animation: zoom 3s;
     position: relative;
 }
 @keyframes zoom{
@@ -146,7 +144,7 @@ header{
     right: 0rem;
     transition: all 1s;
     z-index: 150;
-    opacity: ;
+    opacity: 1;
 
 }
 .show-menu .menu-lateral{
